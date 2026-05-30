@@ -1,1 +1,108 @@
+/* ── Wren & Martin Grammar Portal — Shared Styles ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  --ink:#18120a;
+  --paper:#fdf8f1;
+  --cream:#f5ede0;
+  --gold:#b8860b;
+  --goldl:#d4a520;
+  --teal:#1a6060;
+  --tb:#e6f4f4;
+  --green:#1a5c1a;
+  --gb:#e8f5e8;
+  --rust:#7a2e1a;
+  --rb:#fdf0ec;
+  --sh:0 2px 14px rgba(24,18,10,.10);
+  --shh:0 4px 24px rgba(24,18,10,.18);
+}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Source Serif 4',Georgia,serif;
+  font-size:15px;
+  line-height:1.75;
+}
+
+/* ── Topbar ── */
+.topbar{
+  background:var(--ink);
+  color:var(--paper);
+  padding:.75rem 1.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:3px solid var(--gold);
+  position:sticky;top:0;z-index:500;
+  font-family:'JetBrains Mono',monospace;
+}
+.topbar .brand{
+  font-size:.85rem;font-weight:600;color:var(--goldl);
+  display:flex;align-items:center;gap:.5rem;
+}
+.topbar .user-info{
+  font-size:.72rem;color:#b0a090;
+  display:flex;align-items:center;gap:1rem;
+}
+.topbar .logout-btn{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;
+  background:rgba(184,134,11,.15);color:var(--goldl);
+  border:1px solid rgba(184,134,11,.3);border-radius:4px;
+  padding:.25rem .7rem;cursor:pointer;transition:all .15s;
+}
+.topbar .logout-btn:hover{background:var(--gold);color:var(--ink)}
+
+/* ── Progress bar ── */
+#prog{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--teal));z-index:9999;width:0;transition:width .1s}
+
+/* ── Section styles ── */
+.hs{margin-bottom:2rem}
+.hh{display:flex;align-items:flex-start;gap:.65rem;padding-bottom:.55rem;border-bottom:2.5px solid var(--gold);margin-bottom:.7rem}
+.hb{background:var(--ink);color:var(--goldl);font-family:'JetBrains Mono',monospace;font-size:.66rem;font-weight:700;padding:.18rem .48rem;border-radius:4px;white-space:nowrap;margin-top:.16rem;flex-shrink:0}
+.ht{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--ink);line-height:1.3}
+.hu{font-size:.73rem;color:var(--rust);font-style:italic;margin-top:.1rem}
+.ins{background:var(--cream);border-left:4px solid var(--gold);padding:.5rem .82rem;margin-bottom:.68rem;font-size:.84rem;font-style:italic;color:#5a4030;border-radius:0 5px 5px 0}
+
+/* ── Q&A Items ── */
+.sc{display:flex;gap:.32rem;margin-bottom:.6rem}
+.bs{font-family:'JetBrains Mono',monospace;font-size:.67rem;padding:.2rem .58rem;border-radius:4px;cursor:pointer;border:1px solid;transition:all .11s}
+.bsh{background:var(--tb);color:var(--teal);border-color:#9acece}
+.bsh:hover{background:var(--teal);color:#fff}
+.bsh2{background:var(--rb);color:var(--rust);border-color:#d0a090}
+.bsh2:hover{background:var(--rust);color:#fff}
+.qi{background:#fefbf7;border:1px solid #e5d9c8;border-radius:7px;margin-bottom:.55rem;overflow:hidden;transition:box-shadow .11s}
+.qi:hover{box-shadow:var(--sh)}
+.qi.hidden{display:none}
+.qr{display:flex;gap:.58rem;align-items:flex-start;padding:.62rem .82rem;cursor:pointer;user-select:none}
+.qn{font-family:'JetBrains Mono',monospace;font-size:.67rem;font-weight:700;color:var(--gold);background:#f0e6d0;border-radius:3px;padding:.1rem .36rem;min-width:26px;text-align:center;margin-top:.12rem;flex-shrink:0}
+.qt{font-size:.89rem;flex:1;color:#2a1f12;word-break:break-word}
+.tb{font-size:.78rem;color:var(--teal);background:var(--tb);border:1px solid #9acece;border-radius:4px;padding:.14rem .4rem;flex-shrink:0;transition:all .11s;width:24px;text-align:center}
+.tb.o{background:var(--teal);color:#fff}
+.ap{display:none;border-top:1px dashed #c5b89a}
+.ap.o{display:block}
+.ab{padding:.58rem .82rem;background:var(--gb);border-left:4px solid var(--green)}
+.al{font-family:'JetBrains Mono',monospace;font-size:.61rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.2rem}
+.at{font-size:.87rem;color:#1a3a1a;font-weight:600;word-break:break-word}
+.rb{padding:.52rem .82rem;background:#fffaec;border-left:4px solid var(--gold)}
+.rl{font-family:'JetBrains Mono',monospace;font-size:.61rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.2rem}
+.rt{font-size:.82rem;color:#5a3c10;line-height:1.65}
+.hs.hidden-sec{display:none}
+
+/* ── Back to top ── */
+#btt{position:fixed;bottom:1.6rem;right:1.6rem;background:var(--ink);color:var(--goldl);border:none;border-radius:50%;width:40px;height:40px;font-size:1rem;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.3);display:none;align-items:center;justify-content:center;z-index:400;transition:transform .14s}
+#btt:hover{transform:translateY(-3px)}
+
+/* ── Footer ── */
+footer{background:var(--ink);color:#7a6a5a;text-align:center;padding:1.6rem;font-family:'JetBrains Mono',monospace;font-size:.75rem}
+footer span{color:var(--goldl)}
+
+/* ── Responsive ── */
+@media(max-width:580px){
+  .qr{padding:.54rem .62rem}
+  main{padding:1.2rem .82rem 4rem}
+  .ht{font-size:1rem}
+  .topbar{padding:.6rem 1rem}
+}
 
